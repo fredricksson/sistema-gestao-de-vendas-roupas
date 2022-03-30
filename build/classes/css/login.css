@@ -1,0 +1,25 @@
+#title{
+    -fx-font-family:  "Elephant";
+    -fx-font-size: 25px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    
+}
+.label{
+      -fx-font-family:  "Georgia";
+       -fx-font-size: 14px;
+       -fx-font-weight: bold;
+}
+.text-field{
+    -fx-background-radius:  50px;
+    -fx-font-family:"Times New Roman";
+    -fx-font-size: 14px;
+    
+}
+.button{
+      -fx-background-color: #006699;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family:  "Modern No. 20";
+    -fx-font-size: 18px;
+}

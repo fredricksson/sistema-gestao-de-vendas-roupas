@@ -1,0 +1,60 @@
+#title{
+    -fx-font-family:  "Times New Roman";
+    -fx-font-size: 14px;
+    -fx-text-fill:  black;
+}
+#subTitle{
+    -fx-font-family:  "Times New Roman";
+    -fx-font-size: 14px;
+    -fx-text-fill:  black;
+}
+.label{
+       -fx-font-family:  "Modern No. 20";
+       -fx-font-size: 16px;
+      
+}
+#seguinte{
+    -fx-background-color: #006699;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family:  "Modern No. 20";
+    -fx-font-size: 16px;
+}
+#nome{
+    -fx-background-image: url("../img/icons8-name-64.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left;
+   -fx-background-size: 25px;
+   
+}
+#apelido{
+    -fx-background-image: url("../img/icons8-name-50.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left;
+   -fx-background-size: 25px;
+   
+}
+#contacto{
+    -fx-background-image: url("../img/icons8-cell-phone-24.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left;
+   -fx-background-size: 25px;
+   
+}
+#email{
+    -fx-background-image: url("../img/icons8-email.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left;
+   -fx-background-size: 25px;
+   
+}
+#senha{
+    -fx-background-image: url("../img/lock.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left;
+   -fx-background-size: 25px;
+   
+}
+#seguinte:hover{
+    -fx-background-color: cadetblue;
+}

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="janela" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="800.0" styleClass="background" stylesheets="@../../../css/styleModel.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mz.vizensa.controller.EditarProdutoController">
+   <children>
+      <StackPane prefHeight="48.0" prefWidth="800.0">
+         <children>
+            <Label style="-fx-text-fill: white; -fx-font-size: 25; -fx-font-family: &quot;Times New Roman&quot;;" styleClass="labelTitle" text="Alterar Produto">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" top="10.0" />
+         </VBox.margin>
+      </StackPane>
+      <VBox minHeight="400.0" prefHeight="200.0" prefWidth="100.0" styleClass="backgroundHboxWhite" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets bottom="20.0" left="30.0" right="30.0" />
+         </VBox.margin>
+         <children>
+            <HBox prefHeight="90.0" prefWidth="740.0">
+               <children>
+                  <Label text="Nome:">
+                     <HBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="nome" alignment="CENTER" prefHeight="38.0" prefWidth="238.0" promptText="Digite o nome do produto" style="-fx-background-image: null; -fx-font-size: 16;" styleClass="text-field">
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label layoutX="30.0" layoutY="30.0" text="Cor:">
+                     <HBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ColorPicker fx:id="cor" prefHeight="38.0" prefWidth="234.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </ColorPicker>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="90.0" prefWidth="200.0">
+               <children>
+                  <Label text="Tamanhos:">
+                     <HBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="tamanhos" alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="231.0" promptText="Tamanhos" style="-fx-background-image: null; -fx-font-size: 16;">
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#addTamanhos" prefHeight="39.0" prefWidth="39.0" style="-fx-background-radius: 0;" styleClass="buttonSave">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Adicicionar tamanho" />
+                     </tooltip>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#remTamanhos" prefHeight="39.0" prefWidth="39.0" style="-fx-background-color: red; -fx-font-weight: bold;">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/delete.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="remover ultimo tamnho " />
+                     </tooltip>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Separator layoutX="10.0" layoutY="94.0" prefWidth="200.0" />
+            <HBox prefHeight="90.0" prefWidth="200.0">
+               <children>
+                  <Label text="Quantidade:">
+                     <HBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="quantidade" alignment="CENTER" prefHeight="38.0" prefWidth="238.0" promptText="Digite o nome do produto" style="-fx-background-image: null; -fx-font-size: 16;">
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label layoutX="30.0" layoutY="35.0" text="Preco:">
+                     <HBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="preco" alignment="CENTER" layoutX="127.0" layoutY="30.0" prefHeight="38.0" prefWidth="238.0" promptText="Digite o preco do produto" style="-fx-background-image: null; -fx-font-size: 16;">
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Separator layoutX="10.0" layoutY="193.0" prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Categoria:">
+                     <HBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="categoria" prefHeight="38.0" prefWidth="277.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button maxWidth="221.0" mnemonicParsing="false" onAction="#SalvarAlteracoes" prefHeight="42.0" prefWidth="221.0" styleClass="buttonSave" text="Salvar as alteracoes">
+         <effect>
+            <Glow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <VBox.margin>
+            <Insets bottom="50.0" left="549.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

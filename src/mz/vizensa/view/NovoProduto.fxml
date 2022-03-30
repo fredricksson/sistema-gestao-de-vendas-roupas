@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="janela" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="600.0" styleClass="background" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mz.vizensa.controller.NovoProdutoController">
+   <children>
+      <StackPane prefHeight="85.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="title" prefHeight="44.0" prefWidth="224.0" text="Novo Produto" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </StackPane>
+      <ToolBar maxWidth="200.0" minWidth="500.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="500.0" style="-fx-background-radius: 10;">
+         <items>
+            <AnchorPane prefHeight="82.0">
+               <children>
+                  <Label layoutX="55.0" layoutY="48.0" text="* Nome:" />
+                  <TextField fx:id="nome" alignment="CENTER" focusTraversable="false" layoutX="159.0" layoutY="42.0" prefHeight="40.0" prefWidth="300.0" promptText="Digite o nome do produto" />
+                  <Label layoutX="59.0" layoutY="4.0" style="-fx-font-size: 14;" text="* Codigo: " />
+                  <TextField fx:id="codigo" alignment="CENTER" focusTraversable="false" layoutX="159.0" layoutY="-1.0" prefHeight="27.0" prefWidth="218.0" promptText="Digite o codigo do produto" />
+                  <Separator layoutX="1.0" layoutY="36.0" prefHeight="3.0" prefWidth="490.0" />
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0" />
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="82.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="78.0" layoutY="30.0" text="* Cor:" />
+                  <ColorPicker fx:id="cor" layoutX="158.0" layoutY="24.0" prefHeight="39.0" prefWidth="300.0" />
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0" />
+            <AnchorPane layoutX="10.0" layoutY="103.0" prefHeight="82.0" prefWidth="590.0">
+               <children>
+                  <Label layoutX="10.0" layoutY="27.0" text="* Tamanhos:" />
+                  <TextField fx:id="tamanhos" alignment="CENTER" editable="false" layoutX="159.0" layoutY="23.0" prefHeight="40.0" prefWidth="153.0" promptText="Tamanhos" />
+                  <Button layoutX="321.0" layoutY="23.0" mnemonicParsing="false" onAction="#addTamanhos" prefHeight="39.0" prefWidth="39.0">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Adicicionar tamanho" />
+                     </tooltip></Button>
+                  <Button layoutX="371.0" layoutY="23.0" mnemonicParsing="false" onAction="#remTamanhos" prefHeight="39.0" prefWidth="39.0" style="-fx-background-color: red; -fx-font-weight: bold;">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/delete.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="remover ultimo tamnho " />
+                     </tooltip>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0" />
+            <AnchorPane layoutX="10.0" layoutY="196.0" prefHeight="82.0" prefWidth="590.0">
+               <children>
+                  <TextField fx:id="quantidade" alignment="CENTER" layoutX="159.0" layoutY="23.0" prefHeight="40.0" prefWidth="300.0" promptText="Digite o tamanho do produto" />
+                  <Label layoutX="-2.0" layoutY="26.0" text="* Quantidade:" />
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0" />
+            <AnchorPane layoutX="10.0" layoutY="289.0" prefHeight="82.0" prefWidth="590.0">
+               <children>
+                  <TextField fx:id="preco" alignment="CENTER" layoutX="159.0" layoutY="22.0" prefHeight="40.0" prefWidth="300.0" promptText="Digite o tamanho do produto" />
+                  <Label layoutX="55.0" layoutY="25.0" text="* Preco:" />
+                  <Label layoutX="464.0" layoutY="25.0" text="Mt" />
+               </children>
+            </AnchorPane>
+         </items>
+         <VBox.margin>
+            <Insets left="50.0" right="50.0" />
+         </VBox.margin>
+         <effect>
+            <Reflection fraction="0.15" topOpacity="0.14" />
+         </effect>
+      </ToolBar>
+      <Button maxWidth="200.0" mnemonicParsing="false" onAction="#adiccionar" prefHeight="40.0" text="Adicconar">
+         <VBox.margin>
+            <Insets left="347.0" top="30.0" />
+         </VBox.margin>
+         <effect>
+            <Glow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</VBox>
